@@ -1,8 +1,13 @@
 {
   "name": "whimsical-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Whimsical Components for ReactJS",
-  "keywords": ["react", "whim", "whimsical", "components"],
+  "keywords": [
+    "react",
+    "whim",
+    "whimsical",
+    "components"
+  ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -14,7 +19,7 @@
     "prepare": "yarn build",
     "preversion": "yarn test && yarn lint",
     "version": "yarn test && yarn format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
