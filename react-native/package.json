@@ -1,6 +1,6 @@
 {
-  "name": "@whim/native",
-  "version": "1.0.0",
+  "name": "@whimsical/native",
+  "version": "0.0.1",
   "description": "Whimsical Components for React Native",
   "keywords": ["react", "native", "whim", "whimsical", "components"],
   "main": "lib/index.ts",

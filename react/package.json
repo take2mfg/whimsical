@@ -1,6 +1,6 @@
 {
-  "name": "@whim/react",
-  "version": "1.0.0",
+  "name": "@whimsical/react",
+  "version": "0.0.1",
   "description": "Whimsical Components for ReactJS",
   "keywords": ["react", "whim", "whimsical", "components"],
   "main": "lib/index.ts",
