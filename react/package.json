@@ -1,9 +1,9 @@
 {
-  "name": "@whimsical/react",
+  "name": "whimsical-react",
   "version": "0.0.1",
   "description": "Whimsical Components for ReactJS",
   "keywords": ["react", "whim", "whimsical", "components"],
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",

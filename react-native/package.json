@@ -1,9 +1,9 @@
 {
-  "name": "@whimsical/native",
+  "name": "whimsical-react-native",
   "version": "0.0.1",
   "description": "Whimsical Components for React Native",
   "keywords": ["react", "native", "whim", "whimsical", "components"],
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
