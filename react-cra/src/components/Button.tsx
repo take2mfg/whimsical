@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
 import { darken, lighten } from 'polished';
@@ -17,8 +16,6 @@ import { COLORS } from './colors';
 
 function _Button({
   className,
-  color,
-  purple,
   sm,
   md,
   lg,
@@ -29,34 +26,31 @@ function _Button({
   disabled,
   children,
   onClick,
-}: any): JSX.Element {
+}: any) {
   return (
-    <React.Fragment>
-      <button
-        type={type}
-        className={clsx(
-          className,
-          purple && 'purple',
-          sm && 'sm',
-          md && 'md',
-          lg && 'lg',
-          outline && 'outline',
-          link && 'link'
-        )}
-        style={style}
-        onClick={onClick}
-        disabled={disabled}
-      >
-        {children instanceof Array && children.map
-          ? children.map((child, i) => {
-              if (typeof child === 'string') {
-                return <span key={i}>{child}</span>;
-              }
-              return child;
-            })
-          : children}
-      </button>
-    </React.Fragment>
+    <button
+      type={type}
+      className={clsx(
+        className,
+        sm && 'sm',
+        md && 'md',
+        lg && 'lg',
+        outline && 'outline',
+        link && 'link'
+      )}
+      style={style}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children instanceof Array && children.map
+        ? children.map((child, i) => {
+            if (typeof child === 'string') {
+              return <span key={i}>{child}</span>;
+            }
+            return child;
+          })
+        : children}
+    </button>
   );
 }
 
