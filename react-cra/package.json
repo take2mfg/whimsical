@@ -11,11 +11,16 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "test": "jest --config jestconfig.json",
     "start": "react-scripts start",
     "build": "tsc --project tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest --config jestconfig.json",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn test && yarn lint",
+    "version": "yarn test && yarn format && git add -A src",
+    "postversion": "git push && git push --tags",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
