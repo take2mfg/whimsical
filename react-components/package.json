@@ -1,6 +1,6 @@
 {
-  "name": "whimsical-react-components",
-  "version": "0.0.1",
+  "name": "whimsical-react",
+  "version": "0.0.2",
   "description": "Whimsical Components for ReactJS",
   "keywords": [
     "react",
@@ -32,7 +32,7 @@
   "files": [
     "lib/**/*"
   ],
-  "author": "Matt McGavern",
+  "author": "Ty Barho",
   "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
