@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
 import { darken, lighten } from 'polished';
 
-import { ButtonProps } from './Button.types';
-import { marginHandler } from '../../styles/marginHandler';
+import { marginHandler } from '../styles/marginHandler';
 
-import * as COLORS from '../colors';
+import { COLORS } from './colors';
 
 // function textColor(color: string) {
 //   if (color === 'white' || 'smoke' || 'yellow') {
@@ -16,7 +15,7 @@ import * as COLORS from '../colors';
 //   }
 // }
 
-const _Button: FC<ButtonProps> = ({
+function _Button({
   className,
   color,
   purple,
@@ -30,36 +29,38 @@ const _Button: FC<ButtonProps> = ({
   disabled,
   children,
   onClick,
-}: ButtonProps) => {
+}: any): JSX.Element {
   return (
-    <button
-      type={type}
-      className={clsx(
-        className,
-        purple && 'purple',
-        sm && 'sm',
-        md && 'md',
-        lg && 'lg',
-        outline && 'outline',
-        link && 'link'
-      )}
-      style={style}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {children instanceof Array && children.map
-        ? children.map((child, i) => {
-            if (typeof child === 'string') {
-              return <span key={i}>{child}</span>;
-            }
-            return child;
-          })
-        : children}
-    </button>
+    <React.Fragment>
+      <button
+        type={type}
+        className={clsx(
+          className,
+          purple && 'purple',
+          sm && 'sm',
+          md && 'md',
+          lg && 'lg',
+          outline && 'outline',
+          link && 'link'
+        )}
+        style={style}
+        onClick={onClick}
+        disabled={disabled}
+      >
+        {children instanceof Array && children.map
+          ? children.map((child, i) => {
+              if (typeof child === 'string') {
+                return <span key={i}>{child}</span>;
+              }
+              return child;
+            })
+          : children}
+      </button>
+    </React.Fragment>
   );
-};
+}
 
-const Button = styled(_Button)<ButtonProps>`
+const Button = styled(_Button)`
   outline: none;
   background-color: ${COLORS.white};
   background-image: linear-gradient(

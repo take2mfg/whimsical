@@ -3,4 +3,4 @@ export const DIRECTION_VALUES = {
   B: 'bottom',
   R: 'right',
   L: 'left',
-};
+} as any;
