@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "keywords": [
     "react",
-    "whim",
+    "native",
     "whimsical",
     "components"
   ],
@@ -21,7 +21,11 @@
     "prepublishOnly": "yarn test && yarn lint",
     "preversion": "yarn test && yarn lint",
     "version": "yarn test && yarn format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "test:ci": "yarn test --coverage",
+    "test:badges": "yarn test:ci  && jest-coverage-badges --input coverage/coverage-summary.json --output __badges__"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.17.3",
@@ -37,18 +41,36 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/preset-typescript": "^7.16.7",
     "@storybook/addon-actions": "^5.3",
     "@storybook/addon-knobs": "^5.3",
     "@storybook/addon-links": "^5.3",
     "@storybook/addon-ondevice-actions": "^5.3.23",
     "@storybook/addon-ondevice-knobs": "^5.3.25",
     "@storybook/react-native": "^5.3.25",
+    "@types/jest": "^27.5.1",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.66.13",
+    "@types/react-test-renderer": "^18.0.0",
     "babel-loader": "^8.2.5",
+    "jest": "^28.1.0",
+    "jest-coverage-badges": "^1.1.2",
+    "jest-environment-jsdom": "^28.1.0",
+    "jest-expo": "^45.0.1",
+    "metro-babel-register": "^0.70.3",
+    "react-test-renderer": "^18.1.0",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.7.0",
     "typescript": "~4.3.5"
   },
   "private": false,
   "author": "Ty Barho",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/take2mfg/whimsical.git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
   "license": "MIT"
 }
